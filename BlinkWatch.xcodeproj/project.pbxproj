@@ -1,0 +1,855 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F984001F1ADD861A0096E8C1 /* AEFloatConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400061ADD861A0096E8C1 /* AEFloatConverter.m */; };
+		F98400201ADD861A0096E8C1 /* AEFloatConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400061ADD861A0096E8C1 /* AEFloatConverter.m */; };
+		F98400211ADD861A0096E8C1 /* AEFloatConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400061ADD861A0096E8C1 /* AEFloatConverter.m */; };
+		F98400221ADD861A0096E8C1 /* EZAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400081ADD861A0096E8C1 /* EZAudio.m */; };
+		F98400231ADD861A0096E8C1 /* EZAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400081ADD861A0096E8C1 /* EZAudio.m */; };
+		F98400241ADD861A0096E8C1 /* EZAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400081ADD861A0096E8C1 /* EZAudio.m */; };
+		F98400251ADD861A0096E8C1 /* EZAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F984000A1ADD861A0096E8C1 /* EZAudioFile.m */; };
+		F98400261ADD861A0096E8C1 /* EZAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F984000A1ADD861A0096E8C1 /* EZAudioFile.m */; };
+		F98400271ADD861A0096E8C1 /* EZAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F984000A1ADD861A0096E8C1 /* EZAudioFile.m */; };
+		F98400281ADD861A0096E8C1 /* EZAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F984000C1ADD861A0096E8C1 /* EZAudioPlayer.m */; };
+		F98400291ADD861A0096E8C1 /* EZAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F984000C1ADD861A0096E8C1 /* EZAudioPlayer.m */; };
+		F984002A1ADD861A0096E8C1 /* EZAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F984000C1ADD861A0096E8C1 /* EZAudioPlayer.m */; };
+		F984002B1ADD861A0096E8C1 /* EZAudioPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = F984000E1ADD861A0096E8C1 /* EZAudioPlot.m */; };
+		F984002C1ADD861A0096E8C1 /* EZAudioPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = F984000E1ADD861A0096E8C1 /* EZAudioPlot.m */; };
+		F984002D1ADD861A0096E8C1 /* EZAudioPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = F984000E1ADD861A0096E8C1 /* EZAudioPlot.m */; };
+		F984002E1ADD861A0096E8C1 /* EZAudioPlotGL.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400101ADD861A0096E8C1 /* EZAudioPlotGL.m */; };
+		F984002F1ADD861A0096E8C1 /* EZAudioPlotGL.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400101ADD861A0096E8C1 /* EZAudioPlotGL.m */; };
+		F98400301ADD861A0096E8C1 /* EZAudioPlotGL.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400101ADD861A0096E8C1 /* EZAudioPlotGL.m */; };
+		F98400311ADD861A0096E8C1 /* EZAudioPlotGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400121ADD861A0096E8C1 /* EZAudioPlotGLKViewController.m */; };
+		F98400321ADD861A0096E8C1 /* EZAudioPlotGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400121ADD861A0096E8C1 /* EZAudioPlotGLKViewController.m */; };
+		F98400331ADD861A0096E8C1 /* EZAudioPlotGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400121ADD861A0096E8C1 /* EZAudioPlotGLKViewController.m */; };
+		F98400341ADD861A0096E8C1 /* EZMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400141ADD861A0096E8C1 /* EZMicrophone.m */; };
+		F98400351ADD861A0096E8C1 /* EZMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400141ADD861A0096E8C1 /* EZMicrophone.m */; };
+		F98400361ADD861A0096E8C1 /* EZMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400141ADD861A0096E8C1 /* EZMicrophone.m */; };
+		F98400371ADD861A0096E8C1 /* EZOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400161ADD861A0096E8C1 /* EZOutput.m */; };
+		F98400381ADD861A0096E8C1 /* EZOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400161ADD861A0096E8C1 /* EZOutput.m */; };
+		F98400391ADD861A0096E8C1 /* EZOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400161ADD861A0096E8C1 /* EZOutput.m */; };
+		F984003A1ADD861A0096E8C1 /* EZPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400181ADD861A0096E8C1 /* EZPlot.m */; };
+		F984003B1ADD861A0096E8C1 /* EZPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400181ADD861A0096E8C1 /* EZPlot.m */; };
+		F984003C1ADD861A0096E8C1 /* EZPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400181ADD861A0096E8C1 /* EZPlot.m */; };
+		F984003D1ADD861A0096E8C1 /* EZRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = F984001A1ADD861A0096E8C1 /* EZRecorder.m */; };
+		F984003E1ADD861A0096E8C1 /* EZRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = F984001A1ADD861A0096E8C1 /* EZRecorder.m */; };
+		F984003F1ADD861A0096E8C1 /* EZRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = F984001A1ADD861A0096E8C1 /* EZRecorder.m */; };
+		F98400401ADD861A0096E8C1 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = F984001C1ADD861A0096E8C1 /* MMWormhole.m */; };
+		F98400411ADD861A0096E8C1 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = F984001C1ADD861A0096E8C1 /* MMWormhole.m */; };
+		F98400421ADD861A0096E8C1 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = F984001C1ADD861A0096E8C1 /* MMWormhole.m */; };
+		F98400431ADD861A0096E8C1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = F984001D1ADD861A0096E8C1 /* TPCircularBuffer.c */; };
+		F98400441ADD861A0096E8C1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = F984001D1ADD861A0096E8C1 /* TPCircularBuffer.c */; };
+		F98400451ADD861A0096E8C1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = F984001D1ADD861A0096E8C1 /* TPCircularBuffer.c */; };
+		F984FFBB1ADD83BB0096E8C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984FFBA1ADD83BB0096E8C1 /* AppDelegate.swift */; };
+		F984FFBD1ADD83BB0096E8C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984FFBC1ADD83BB0096E8C1 /* ViewController.swift */; };
+		F984FFC01ADD83BB0096E8C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F984FFBE1ADD83BB0096E8C1 /* Main.storyboard */; };
+		F984FFC21ADD83BB0096E8C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F984FFC11ADD83BB0096E8C1 /* Images.xcassets */; };
+		F984FFC51ADD83BB0096E8C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F984FFC31ADD83BB0096E8C1 /* LaunchScreen.xib */; };
+		F984FFD11ADD83BB0096E8C1 /* BlinkWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984FFD01ADD83BB0096E8C1 /* BlinkWatchTests.swift */; };
+		F984FFE71ADD85DF0096E8C1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984FFE61ADD85DF0096E8C1 /* InterfaceController.swift */; };
+		F984FFE91ADD85DF0096E8C1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984FFE81ADD85DF0096E8C1 /* NotificationController.swift */; };
+		F984FFEB1ADD85DF0096E8C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F984FFEA1ADD85DF0096E8C1 /* Images.xcassets */; };
+		F984FFEF1ADD85DF0096E8C1 /* BlinkWatch WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = F984FFEE1ADD85DF0096E8C1 /* BlinkWatch WatchKit App.app */; };
+		F984FFF71ADD85DF0096E8C1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F984FFF51ADD85DF0096E8C1 /* Interface.storyboard */; };
+		F984FFF91ADD85DF0096E8C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F984FFF81ADD85DF0096E8C1 /* Images.xcassets */; };
+		F984FFFC1ADD85DF0096E8C1 /* BlinkWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F984FFE11ADD85DF0096E8C1 /* BlinkWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F984FFCB1ADD83BB0096E8C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F984FFAD1ADD83BB0096E8C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F984FFB41ADD83BB0096E8C1;
+			remoteInfo = BlinkWatch;
+		};
+		F984FFF01ADD85DF0096E8C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F984FFAD1ADD83BB0096E8C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F984FFED1ADD85DF0096E8C1;
+			remoteInfo = "BlinkWatch WatchKit App";
+		};
+		F984FFFA1ADD85DF0096E8C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F984FFAD1ADD83BB0096E8C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F984FFE01ADD85DF0096E8C1;
+			remoteInfo = "BlinkWatch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F98400031ADD85E00096E8C1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F984FFFC1ADD85DF0096E8C1 /* BlinkWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F96296D51ADD87EF00D8A462 /* BlinkWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BlinkWatch.entitlements; sourceTree = "<group>"; };
+		F96296D71ADD898100D8A462 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F98400051ADD861A0096E8C1 /* AEFloatConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEFloatConverter.h; sourceTree = "<group>"; };
+		F98400061ADD861A0096E8C1 /* AEFloatConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEFloatConverter.m; sourceTree = "<group>"; };
+		F98400071ADD861A0096E8C1 /* EZAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAudio.h; sourceTree = "<group>"; };
+		F98400081ADD861A0096E8C1 /* EZAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAudio.m; sourceTree = "<group>"; };
+		F98400091ADD861A0096E8C1 /* EZAudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAudioFile.h; sourceTree = "<group>"; };
+		F984000A1ADD861A0096E8C1 /* EZAudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAudioFile.m; sourceTree = "<group>"; };
+		F984000B1ADD861A0096E8C1 /* EZAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAudioPlayer.h; sourceTree = "<group>"; };
+		F984000C1ADD861A0096E8C1 /* EZAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAudioPlayer.m; sourceTree = "<group>"; };
+		F984000D1ADD861A0096E8C1 /* EZAudioPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAudioPlot.h; sourceTree = "<group>"; };
+		F984000E1ADD861A0096E8C1 /* EZAudioPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAudioPlot.m; sourceTree = "<group>"; };
+		F984000F1ADD861A0096E8C1 /* EZAudioPlotGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAudioPlotGL.h; sourceTree = "<group>"; };
+		F98400101ADD861A0096E8C1 /* EZAudioPlotGL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAudioPlotGL.m; sourceTree = "<group>"; };
+		F98400111ADD861A0096E8C1 /* EZAudioPlotGLKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAudioPlotGLKViewController.h; sourceTree = "<group>"; };
+		F98400121ADD861A0096E8C1 /* EZAudioPlotGLKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAudioPlotGLKViewController.m; sourceTree = "<group>"; };
+		F98400131ADD861A0096E8C1 /* EZMicrophone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZMicrophone.h; sourceTree = "<group>"; };
+		F98400141ADD861A0096E8C1 /* EZMicrophone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZMicrophone.m; sourceTree = "<group>"; };
+		F98400151ADD861A0096E8C1 /* EZOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZOutput.h; sourceTree = "<group>"; };
+		F98400161ADD861A0096E8C1 /* EZOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZOutput.m; sourceTree = "<group>"; };
+		F98400171ADD861A0096E8C1 /* EZPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPlot.h; sourceTree = "<group>"; };
+		F98400181ADD861A0096E8C1 /* EZPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPlot.m; sourceTree = "<group>"; };
+		F98400191ADD861A0096E8C1 /* EZRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZRecorder.h; sourceTree = "<group>"; };
+		F984001A1ADD861A0096E8C1 /* EZRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZRecorder.m; sourceTree = "<group>"; };
+		F984001B1ADD861A0096E8C1 /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
+		F984001C1ADD861A0096E8C1 /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
+		F984001D1ADD861A0096E8C1 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
+		F984001E1ADD861A0096E8C1 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		F984FFB51ADD83BB0096E8C1 /* BlinkWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlinkWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F984FFB91ADD83BB0096E8C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F984FFBA1ADD83BB0096E8C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F984FFBC1ADD83BB0096E8C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F984FFBF1ADD83BB0096E8C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F984FFC11ADD83BB0096E8C1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F984FFC41ADD83BB0096E8C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F984FFCA1ADD83BB0096E8C1 /* BlinkWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlinkWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F984FFCF1ADD83BB0096E8C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F984FFD01ADD83BB0096E8C1 /* BlinkWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkWatchTests.swift; sourceTree = "<group>"; };
+		F984FFDA1ADD840D0096E8C1 /* BlinkWatch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlinkWatch-Bridging-Header.h"; sourceTree = "<group>"; };
+		F984FFE11ADD85DF0096E8C1 /* BlinkWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BlinkWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F984FFE41ADD85DF0096E8C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F984FFE51ADD85DF0096E8C1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F984FFE61ADD85DF0096E8C1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F984FFE81ADD85DF0096E8C1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F984FFEA1ADD85DF0096E8C1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F984FFEE1ADD85DF0096E8C1 /* BlinkWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F984FFF41ADD85DF0096E8C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F984FFF61ADD85DF0096E8C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F984FFF81ADD85DF0096E8C1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F984FFB21ADD83BB0096E8C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F984FFC71ADD83BB0096E8C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F984FFDE1ADD85DF0096E8C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F98400041ADD861A0096E8C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F98400051ADD861A0096E8C1 /* AEFloatConverter.h */,
+				F98400061ADD861A0096E8C1 /* AEFloatConverter.m */,
+				F98400071ADD861A0096E8C1 /* EZAudio.h */,
+				F98400081ADD861A0096E8C1 /* EZAudio.m */,
+				F98400091ADD861A0096E8C1 /* EZAudioFile.h */,
+				F984000A1ADD861A0096E8C1 /* EZAudioFile.m */,
+				F984000B1ADD861A0096E8C1 /* EZAudioPlayer.h */,
+				F984000C1ADD861A0096E8C1 /* EZAudioPlayer.m */,
+				F984000D1ADD861A0096E8C1 /* EZAudioPlot.h */,
+				F984000E1ADD861A0096E8C1 /* EZAudioPlot.m */,
+				F984000F1ADD861A0096E8C1 /* EZAudioPlotGL.h */,
+				F98400101ADD861A0096E8C1 /* EZAudioPlotGL.m */,
+				F98400111ADD861A0096E8C1 /* EZAudioPlotGLKViewController.h */,
+				F98400121ADD861A0096E8C1 /* EZAudioPlotGLKViewController.m */,
+				F98400131ADD861A0096E8C1 /* EZMicrophone.h */,
+				F98400141ADD861A0096E8C1 /* EZMicrophone.m */,
+				F98400151ADD861A0096E8C1 /* EZOutput.h */,
+				F98400161ADD861A0096E8C1 /* EZOutput.m */,
+				F98400171ADD861A0096E8C1 /* EZPlot.h */,
+				F98400181ADD861A0096E8C1 /* EZPlot.m */,
+				F98400191ADD861A0096E8C1 /* EZRecorder.h */,
+				F984001A1ADD861A0096E8C1 /* EZRecorder.m */,
+				F984001B1ADD861A0096E8C1 /* MMWormhole.h */,
+				F984001C1ADD861A0096E8C1 /* MMWormhole.m */,
+				F984001D1ADD861A0096E8C1 /* TPCircularBuffer.c */,
+				F984001E1ADD861A0096E8C1 /* TPCircularBuffer.h */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		F984FFAC1ADD83BB0096E8C1 = {
+			isa = PBXGroup;
+			children = (
+				F96296D71ADD898100D8A462 /* PrefixHeader.pch */,
+				F984FFB71ADD83BB0096E8C1 /* BlinkWatch */,
+				F984FFCD1ADD83BB0096E8C1 /* BlinkWatchTests */,
+				F984FFE21ADD85DF0096E8C1 /* BlinkWatch WatchKit Extension */,
+				F984FFF21ADD85DF0096E8C1 /* BlinkWatch WatchKit App */,
+				F984FFB61ADD83BB0096E8C1 /* Products */,
+				F984FFDA1ADD840D0096E8C1 /* BlinkWatch-Bridging-Header.h */,
+				F98400041ADD861A0096E8C1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F984FFB61ADD83BB0096E8C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F984FFB51ADD83BB0096E8C1 /* BlinkWatch.app */,
+				F984FFCA1ADD83BB0096E8C1 /* BlinkWatchTests.xctest */,
+				F984FFE11ADD85DF0096E8C1 /* BlinkWatch WatchKit Extension.appex */,
+				F984FFEE1ADD85DF0096E8C1 /* BlinkWatch WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F984FFB71ADD83BB0096E8C1 /* BlinkWatch */ = {
+			isa = PBXGroup;
+			children = (
+				F96296D51ADD87EF00D8A462 /* BlinkWatch.entitlements */,
+				F984FFBA1ADD83BB0096E8C1 /* AppDelegate.swift */,
+				F984FFBC1ADD83BB0096E8C1 /* ViewController.swift */,
+				F984FFBE1ADD83BB0096E8C1 /* Main.storyboard */,
+				F984FFC11ADD83BB0096E8C1 /* Images.xcassets */,
+				F984FFC31ADD83BB0096E8C1 /* LaunchScreen.xib */,
+				F984FFB81ADD83BB0096E8C1 /* Supporting Files */,
+			);
+			path = BlinkWatch;
+			sourceTree = "<group>";
+		};
+		F984FFB81ADD83BB0096E8C1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F984FFB91ADD83BB0096E8C1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F984FFCD1ADD83BB0096E8C1 /* BlinkWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				F984FFD01ADD83BB0096E8C1 /* BlinkWatchTests.swift */,
+				F984FFCE1ADD83BB0096E8C1 /* Supporting Files */,
+			);
+			path = BlinkWatchTests;
+			sourceTree = "<group>";
+		};
+		F984FFCE1ADD83BB0096E8C1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F984FFCF1ADD83BB0096E8C1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F984FFE21ADD85DF0096E8C1 /* BlinkWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F984FFE61ADD85DF0096E8C1 /* InterfaceController.swift */,
+				F984FFE81ADD85DF0096E8C1 /* NotificationController.swift */,
+				F984FFEA1ADD85DF0096E8C1 /* Images.xcassets */,
+				F984FFE31ADD85DF0096E8C1 /* Supporting Files */,
+			);
+			path = "BlinkWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		F984FFE31ADD85DF0096E8C1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F984FFE41ADD85DF0096E8C1 /* Info.plist */,
+				F984FFE51ADD85DF0096E8C1 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F984FFF21ADD85DF0096E8C1 /* BlinkWatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				F984FFF51ADD85DF0096E8C1 /* Interface.storyboard */,
+				F984FFF81ADD85DF0096E8C1 /* Images.xcassets */,
+				F984FFF31ADD85DF0096E8C1 /* Supporting Files */,
+			);
+			path = "BlinkWatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		F984FFF31ADD85DF0096E8C1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F984FFF41ADD85DF0096E8C1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F984FFB41ADD83BB0096E8C1 /* BlinkWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F984FFD41ADD83BB0096E8C1 /* Build configuration list for PBXNativeTarget "BlinkWatch" */;
+			buildPhases = (
+				F984FFB11ADD83BB0096E8C1 /* Sources */,
+				F984FFB21ADD83BB0096E8C1 /* Frameworks */,
+				F984FFB31ADD83BB0096E8C1 /* Resources */,
+				F98400031ADD85E00096E8C1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F984FFFB1ADD85DF0096E8C1 /* PBXTargetDependency */,
+			);
+			name = BlinkWatch;
+			productName = BlinkWatch;
+			productReference = F984FFB51ADD83BB0096E8C1 /* BlinkWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F984FFC91ADD83BB0096E8C1 /* BlinkWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F984FFD71ADD83BB0096E8C1 /* Build configuration list for PBXNativeTarget "BlinkWatchTests" */;
+			buildPhases = (
+				F984FFC61ADD83BB0096E8C1 /* Sources */,
+				F984FFC71ADD83BB0096E8C1 /* Frameworks */,
+				F984FFC81ADD83BB0096E8C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F984FFCC1ADD83BB0096E8C1 /* PBXTargetDependency */,
+			);
+			name = BlinkWatchTests;
+			productName = BlinkWatchTests;
+			productReference = F984FFCA1ADD83BB0096E8C1 /* BlinkWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F984FFE01ADD85DF0096E8C1 /* BlinkWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F98400001ADD85E00096E8C1 /* Build configuration list for PBXNativeTarget "BlinkWatch WatchKit Extension" */;
+			buildPhases = (
+				F984FFDD1ADD85DF0096E8C1 /* Sources */,
+				F984FFDE1ADD85DF0096E8C1 /* Frameworks */,
+				F984FFDF1ADD85DF0096E8C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F984FFF11ADD85DF0096E8C1 /* PBXTargetDependency */,
+			);
+			name = "BlinkWatch WatchKit Extension";
+			productName = "BlinkWatch WatchKit Extension";
+			productReference = F984FFE11ADD85DF0096E8C1 /* BlinkWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		F984FFED1ADD85DF0096E8C1 /* BlinkWatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F984FFFD1ADD85E00096E8C1 /* Build configuration list for PBXNativeTarget "BlinkWatch WatchKit App" */;
+			buildPhases = (
+				F984FFEC1ADD85DF0096E8C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BlinkWatch WatchKit App";
+			productName = "BlinkWatch WatchKit App";
+			productReference = F984FFEE1ADD85DF0096E8C1 /* BlinkWatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F984FFAD1ADD83BB0096E8C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Bosch;
+				TargetAttributes = {
+					F984FFB41ADD83BB0096E8C1 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = WWLAL9RAZZ;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					F984FFC91ADD83BB0096E8C1 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = F984FFB41ADD83BB0096E8C1;
+					};
+					F984FFE01ADD85DF0096E8C1 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					F984FFED1ADD85DF0096E8C1 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = F984FFB01ADD83BB0096E8C1 /* Build configuration list for PBXProject "BlinkWatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F984FFAC1ADD83BB0096E8C1;
+			productRefGroup = F984FFB61ADD83BB0096E8C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F984FFB41ADD83BB0096E8C1 /* BlinkWatch */,
+				F984FFC91ADD83BB0096E8C1 /* BlinkWatchTests */,
+				F984FFE01ADD85DF0096E8C1 /* BlinkWatch WatchKit Extension */,
+				F984FFED1ADD85DF0096E8C1 /* BlinkWatch WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F984FFB31ADD83BB0096E8C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F984FFC01ADD83BB0096E8C1 /* Main.storyboard in Resources */,
+				F984FFC51ADD83BB0096E8C1 /* LaunchScreen.xib in Resources */,
+				F984FFC21ADD83BB0096E8C1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F984FFC81ADD83BB0096E8C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F984FFDF1ADD85DF0096E8C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F984FFEB1ADD85DF0096E8C1 /* Images.xcassets in Resources */,
+				F984FFEF1ADD85DF0096E8C1 /* BlinkWatch WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F984FFEC1ADD85DF0096E8C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F984FFF71ADD85DF0096E8C1 /* Interface.storyboard in Resources */,
+				F984FFF91ADD85DF0096E8C1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F984FFB11ADD83BB0096E8C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F98400371ADD861A0096E8C1 /* EZOutput.m in Sources */,
+				F98400311ADD861A0096E8C1 /* EZAudioPlotGLKViewController.m in Sources */,
+				F984001F1ADD861A0096E8C1 /* AEFloatConverter.m in Sources */,
+				F98400431ADD861A0096E8C1 /* TPCircularBuffer.c in Sources */,
+				F98400221ADD861A0096E8C1 /* EZAudio.m in Sources */,
+				F98400281ADD861A0096E8C1 /* EZAudioPlayer.m in Sources */,
+				F984002B1ADD861A0096E8C1 /* EZAudioPlot.m in Sources */,
+				F98400251ADD861A0096E8C1 /* EZAudioFile.m in Sources */,
+				F984002E1ADD861A0096E8C1 /* EZAudioPlotGL.m in Sources */,
+				F984FFBD1ADD83BB0096E8C1 /* ViewController.swift in Sources */,
+				F984003A1ADD861A0096E8C1 /* EZPlot.m in Sources */,
+				F98400341ADD861A0096E8C1 /* EZMicrophone.m in Sources */,
+				F984003D1ADD861A0096E8C1 /* EZRecorder.m in Sources */,
+				F98400401ADD861A0096E8C1 /* MMWormhole.m in Sources */,
+				F984FFBB1ADD83BB0096E8C1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F984FFC61ADD83BB0096E8C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F98400441ADD861A0096E8C1 /* TPCircularBuffer.c in Sources */,
+				F984003E1ADD861A0096E8C1 /* EZRecorder.m in Sources */,
+				F984002C1ADD861A0096E8C1 /* EZAudioPlot.m in Sources */,
+				F984003B1ADD861A0096E8C1 /* EZPlot.m in Sources */,
+				F98400231ADD861A0096E8C1 /* EZAudio.m in Sources */,
+				F98400411ADD861A0096E8C1 /* MMWormhole.m in Sources */,
+				F98400351ADD861A0096E8C1 /* EZMicrophone.m in Sources */,
+				F98400381ADD861A0096E8C1 /* EZOutput.m in Sources */,
+				F98400291ADD861A0096E8C1 /* EZAudioPlayer.m in Sources */,
+				F984002F1ADD861A0096E8C1 /* EZAudioPlotGL.m in Sources */,
+				F98400261ADD861A0096E8C1 /* EZAudioFile.m in Sources */,
+				F984FFD11ADD83BB0096E8C1 /* BlinkWatchTests.swift in Sources */,
+				F98400321ADD861A0096E8C1 /* EZAudioPlotGLKViewController.m in Sources */,
+				F98400201ADD861A0096E8C1 /* AEFloatConverter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F984FFDD1ADD85DF0096E8C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F98400391ADD861A0096E8C1 /* EZOutput.m in Sources */,
+				F98400331ADD861A0096E8C1 /* EZAudioPlotGLKViewController.m in Sources */,
+				F98400211ADD861A0096E8C1 /* AEFloatConverter.m in Sources */,
+				F98400451ADD861A0096E8C1 /* TPCircularBuffer.c in Sources */,
+				F98400241ADD861A0096E8C1 /* EZAudio.m in Sources */,
+				F984002A1ADD861A0096E8C1 /* EZAudioPlayer.m in Sources */,
+				F984002D1ADD861A0096E8C1 /* EZAudioPlot.m in Sources */,
+				F98400271ADD861A0096E8C1 /* EZAudioFile.m in Sources */,
+				F98400301ADD861A0096E8C1 /* EZAudioPlotGL.m in Sources */,
+				F984FFE91ADD85DF0096E8C1 /* NotificationController.swift in Sources */,
+				F984003C1ADD861A0096E8C1 /* EZPlot.m in Sources */,
+				F98400361ADD861A0096E8C1 /* EZMicrophone.m in Sources */,
+				F984003F1ADD861A0096E8C1 /* EZRecorder.m in Sources */,
+				F98400421ADD861A0096E8C1 /* MMWormhole.m in Sources */,
+				F984FFE71ADD85DF0096E8C1 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F984FFCC1ADD83BB0096E8C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F984FFB41ADD83BB0096E8C1 /* BlinkWatch */;
+			targetProxy = F984FFCB1ADD83BB0096E8C1 /* PBXContainerItemProxy */;
+		};
+		F984FFF11ADD85DF0096E8C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F984FFED1ADD85DF0096E8C1 /* BlinkWatch WatchKit App */;
+			targetProxy = F984FFF01ADD85DF0096E8C1 /* PBXContainerItemProxy */;
+		};
+		F984FFFB1ADD85DF0096E8C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F984FFE01ADD85DF0096E8C1 /* BlinkWatch WatchKit Extension */;
+			targetProxy = F984FFFA1ADD85DF0096E8C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F984FFBE1ADD83BB0096E8C1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F984FFBF1ADD83BB0096E8C1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F984FFC31ADD83BB0096E8C1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F984FFC41ADD83BB0096E8C1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		F984FFF51ADD85DF0096E8C1 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F984FFF61ADD85DF0096E8C1 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F98400011ADD85E00096E8C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BlinkWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "BlinkWatch-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		F98400021ADD85E00096E8C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BlinkWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "BlinkWatch-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F984FFD21ADD83BB0096E8C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "BlinkWatch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F984FFD31ADD83BB0096E8C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "BlinkWatch-Bridging-Header.h";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F984FFD51ADD83BB0096E8C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = BlinkWatch/BlinkWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				INFOPLIST_FILE = BlinkWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlinkWatch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F984FFD61ADD83BB0096E8C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = BlinkWatch/BlinkWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				INFOPLIST_FILE = BlinkWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlinkWatch-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F984FFD81ADD83BB0096E8C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BlinkWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlinkWatch-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlinkWatch.app/BlinkWatch";
+			};
+			name = Debug;
+		};
+		F984FFD91ADD83BB0096E8C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BlinkWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlinkWatch-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlinkWatch.app/BlinkWatch";
+			};
+			name = Release;
+		};
+		F984FFFE1ADD85E00096E8C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = BlinkWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "BlinkWatch WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		F984FFFF1ADD85E00096E8C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = BlinkWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "BlinkWatch WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F98400001ADD85E00096E8C1 /* Build configuration list for PBXNativeTarget "BlinkWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F98400011ADD85E00096E8C1 /* Debug */,
+				F98400021ADD85E00096E8C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F984FFB01ADD83BB0096E8C1 /* Build configuration list for PBXProject "BlinkWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F984FFD21ADD83BB0096E8C1 /* Debug */,
+				F984FFD31ADD83BB0096E8C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F984FFD41ADD83BB0096E8C1 /* Build configuration list for PBXNativeTarget "BlinkWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F984FFD51ADD83BB0096E8C1 /* Debug */,
+				F984FFD61ADD83BB0096E8C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F984FFD71ADD83BB0096E8C1 /* Build configuration list for PBXNativeTarget "BlinkWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F984FFD81ADD83BB0096E8C1 /* Debug */,
+				F984FFD91ADD83BB0096E8C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F984FFFD1ADD85E00096E8C1 /* Build configuration list for PBXNativeTarget "BlinkWatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F984FFFE1ADD85E00096E8C1 /* Debug */,
+				F984FFFF1ADD85E00096E8C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F984FFAD1ADD83BB0096E8C1 /* Project object */;
+}
