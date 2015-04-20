@@ -100,6 +100,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		32C7A7CD1AE56F0E00CADDC3 /* BlinkWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "BlinkWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		F96296D51ADD87EF00D8A462 /* BlinkWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BlinkWatch.entitlements; sourceTree = "<group>"; };
 		F96296D71ADD898100D8A462 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F98400051ADD861A0096E8C1 /* AEFloatConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEFloatConverter.h; sourceTree = "<group>"; };
@@ -276,6 +277,7 @@
 		F984FFE21ADD85DF0096E8C1 /* BlinkWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				32C7A7CD1AE56F0E00CADDC3 /* BlinkWatch WatchKit Extension.entitlements */,
 				F984FFE61ADD85DF0096E8C1 /* InterfaceController.swift */,
 				F984FFE81ADD85DF0096E8C1 /* NotificationController.swift */,
 				F984FFEA1ADD85DF0096E8C1 /* Images.xcassets */,
@@ -408,6 +410,12 @@
 					};
 					F984FFE01ADD85DF0096E8C1 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = WWLAL9RAZZ;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					F984FFED1ADD85DF0096E8C1 = {
 						CreatedOnToolsVersion = 6.2;
@@ -590,6 +598,9 @@
 		F98400011ADD85E00096E8C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "BlinkWatch WatchKit Extension/BlinkWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -597,6 +608,7 @@
 				INFOPLIST_FILE = "BlinkWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "BlinkWatch-Bridging-Header.h";
 			};
@@ -605,9 +617,13 @@
 		F98400021ADD85E00096E8C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "BlinkWatch WatchKit Extension/BlinkWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "BlinkWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "BlinkWatch-Bridging-Header.h";
 			};

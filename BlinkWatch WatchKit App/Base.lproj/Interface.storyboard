@@ -10,12 +10,10 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BlinkWatch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" height="149" alignment="left" id="q4z-Rg-1Jd">
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </group>
+                        <button width="1" height="1" alignment="left" title="GO!" id="Kti-ph-4Rs"/>
                     </items>
                     <connections>
-                        <outlet property="background" destination="q4z-Rg-1Jd" id="tDZ-ek-rSA"/>
+                        <outlet property="buttonLabel" destination="Kti-ph-4Rs" id="bll-tt-UiL"/>
                     </connections>
                 </controller>
             </objects>
