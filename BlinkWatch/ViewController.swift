@@ -19,7 +19,6 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
     
     
     // MARK: - UI Objects
-    @IBOutlet weak var printButton: UIButton!
     @IBOutlet weak var audioPlot: EZAudioPlotGL!
     @IBOutlet weak var beat: UILabel!
     
@@ -36,7 +35,6 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
     // Tunnel for data exchange
     var wormhole = MMWormhole(applicationGroupIdentifier: "group.bosch.cmpjmi", optionalDirectory: "theWatch")
 
-    
     
     // MARK: - official SWIFT
     override func viewDidLoad() {
@@ -65,8 +63,6 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
     func microphone(microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
         dispatch_async(dispatch_get_main_queue(), {
             
-            
-            
             self.audioPlot.updateBuffer(buffer[0], withBufferSize: bufferSize)
             if(abs(buffer[0][0]) > 0.01){
                 
@@ -79,7 +75,6 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
                     superbuffer.append(Double(buffer[0][i]))
                 }
                 
-                
                 //find max in self.fft
                 let fftArray = self.fft(superbuffer)
                 
@@ -87,18 +82,12 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
                 var upperbound = 3
                 
                 var fftEnergy = fftArray[lowerbound...upperbound].reduce(0, +)
-                
-                
-                
-                
-                
+
                 
                 //let fftMax = fftArray[9...20].reduce(fftArray[9], { max($0, $1) })
                 
                 
                 println((fftEnergy - self.oldEnergy))
-                
-                
                 
                 if fftEnergy - self.oldEnergy > 0.05 {
                     var beat_c = self.bufferCounter
@@ -124,21 +113,13 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
                         }
                         self.lastBeat = beat_c
                     }
-                    
                 }
-                
                 
                 //Save old Energy
                 
                 self.oldEnergy = fftEnergy
-                
-                
-            }
-            
+                }
         })
-        
-        
-        
     }
     
     func microphone(microphone: EZMicrophone!, hasAudioStreamBasicDescription audioStreamBasicDescription: AudioStreamBasicDescription) {
@@ -148,16 +129,7 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
     func microphone(microphone: EZMicrophone!, hasBufferList bufferList: UnsafeMutablePointer<AudioBufferList>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
         //println(bufferList[0])
     }
-    
-    func sqrt(x: [Double]) -> [Double] {
-        var results = [Double](count:x.count, repeatedValue:0.0)
-        vvsqrt(&results, x, [Int32(x.count)])
-        return results
-    }
-    
-    
-    let fft_weights: FFTSetupD = vDSP_create_fftsetupD(vDSP_Length(log2(Float(511))), FFTRadix(kFFTRadix2))
-    
+    // MARK: - FFT
     func fft(var inputArray:[Double]) -> [Double] {
         var fftMagnitudes = [Double](count:inputArray.count, repeatedValue:0.0)
         var zeroArray = [Double](count:inputArray.count, repeatedValue:0.0)
@@ -173,14 +145,12 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
         return normalizedValues
     }
     
-    @IBAction func printButton(sender: AnyObject) {
-        
-        println(self.appendedBuffer)
-        println("----------------------------------------------------")
-        println(self.appendedFft)
-        
-        
-        
+    func sqrt(x: [Double]) -> [Double] {
+        var results = [Double](count:x.count, repeatedValue:0.0)
+        vvsqrt(&results, x, [Int32(x.count)])
+        return results
     }
+    
+    let fft_weights: FFTSetupD = vDSP_create_fftsetupD(vDSP_Length(log2(Float(511))), FFTRadix(kFFTRadix2))
 }
 
