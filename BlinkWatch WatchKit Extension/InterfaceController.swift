@@ -12,34 +12,45 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
     
-    var black = true
-    @IBOutlet weak var background: WKInterfaceGroup!
+    // MARK: - UI Watch Elements
+    @IBOutlet weak var buttonLabel: WKInterfaceButton!
     
-    
+    // MARK: - Attributes
+    var oldOutput = NSString()
+    var oldRandomNumber = 1
     var wormhole = MMWormhole(applicationGroupIdentifier: "group.bosch.cmpjmi", optionalDirectory: "theWatch")
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        
-        
-        
-        wormhole.listenForMessageWithIdentifier("mess", listener: { (String) -> Void in
+        // MARK: - Wormhole Listener (Receiver)
+        var listener: Void = wormhole.listenForMessageWithIdentifier("mess", listener: { (String) -> Void in
             
-            if self.black == true {
+            // setting text of button label
+            var output : NSString = self.wormhole.messageWithIdentifier("mess") as NSString!
+            
+            // checking if new bass-sequence is different from last bass-sequence
+            if (output != self.oldOutput) {
                 
-                self.background.setBackgroundColor(UIColor.whiteColor())
-                self.black = false
+                var randomNumber = Int(arc4random_uniform(5))
                 
-            } else {
+                if randomNumber == self.oldRandomNumber {
+                    if randomNumber == 0 {
+                        randomNumber += 1
+                    }
+                    else{
+                        randomNumber -= 1
+                    }
+                }
+                self.changeBackgroundColor(output, index: randomNumber)
+                self.oldRandomNumber = randomNumber
+                self.oldOutput = output
                 
-                self.background.setBackgroundColor(UIColor.blackColor())
-                self.black = true
-                
+                // for debugging - will be deleted
+                //println(output)
+                self.buttonLabel.setTitle(output)
             }
-            
         })
-        
     }
     
     override func willActivate() {
@@ -51,5 +62,19 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    // MARK: - Setting Backgroundcolor
+    func changeBackgroundColor(identifyer: String, index: Int) {
+        
+        var farbPalette = [UIColor]()
+        
+        farbPalette = [UIColor.blueColor(), UIColor.redColor(), UIColor.magentaColor(), UIColor.greenColor(), UIColor.yellowColor()]
+        
+        // for debugging - will be deleted
+        println("LUME with index: \(index)")
+        
+        buttonLabel.setBackgroundColor(farbPalette[index])
+    }
+
     
 }
