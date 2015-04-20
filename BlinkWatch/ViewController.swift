@@ -12,46 +12,43 @@ import AVFoundation
 import GLKit
 import Accelerate
 
-//var wormhole = MMWormhole(applicationGroupIdentifier: "group.bosch.cmpjmi", optionalDirectory: "theWatch")
+var wormhole = MMWormhole(applicationGroupIdentifier: "group.bosch.cmpjmi", optionalDirectory: "theWatch")
 
 
 class ViewController: UIViewController, EZMicrophoneDelegate {
     
-    
-    // MARK: - UI Objects
     @IBOutlet weak var printButton: UIButton!
     @IBOutlet weak var audioPlot: EZAudioPlotGL!
     @IBOutlet weak var beat: UILabel!
     
     
-    // MARK: - Attributes
     var microphone: EZMicrophone!
+    
     var appendedBuffer = [Double]()
     var appendedFft = [Double]()
+    
     var fftCounter = 0
     var oldEnergy = 0 as Double
     var bufferCounter = 0
     var lastBeat = -10
     
-    // Tunnel for data exchange
-    var wormhole = MMWormhole(applicationGroupIdentifier: "group.bosch.cmpjmi", optionalDirectory: "theWatch")
-
-    
-    
-    // MARK: - official SWIFT
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
         
-        // initialize UI iphone
+        
         self.microphone = EZMicrophone(microphoneDelegate: self)
+        
+        
+        
+        
         self.audioPlot.backgroundColor = UIColor.blackColor()
         self.audioPlot.color = UIColor.orangeColor()
         self.audioPlot.plotType = EZPlotType.Rolling
         self.audioPlot.shouldFill = false
         self.audioPlot.shouldMirror = false
         
-        // start recording via internal microphone
         self.microphone.startFetchingAudio()
         
     }
@@ -61,9 +58,16 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - BeatDetection
+    
+    
+    
+    
+    var supersuperbuffer = [Double]()
+    var bigBufferCounter = 1
+    
     func microphone(microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
         dispatch_async(dispatch_get_main_queue(), {
+            
             
             
             
@@ -74,63 +78,78 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
                 
                 self.bufferCounter++
                 
-                for( var i = 0; i<511; i++){
+                for( var i = 0; i<512; i++){
                     
                     superbuffer.append(Double(buffer[0][i]))
                 }
                 
-                
-                //find max in self.fft
-                let fftArray = self.fft(superbuffer)
-                
-                var lowerbound = 1
-                var upperbound = 3
-                
-                var fftEnergy = fftArray[lowerbound...upperbound].reduce(0, +)
-                
-                
-                
-                
-                
-                
-                //let fftMax = fftArray[9...20].reduce(fftArray[9], { max($0, $1) })
-                
-                
-                println((fftEnergy - self.oldEnergy))
-                
-                
-                
-                if fftEnergy - self.oldEnergy > 0.05 {
-                    var beat_c = self.bufferCounter
+                self.supersuperbuffer = self.supersuperbuffer + superbuffer
+                self.bigBufferCounter++
+                if self.bigBufferCounter == 4 {
                     
-                    if(beat_c - self.lastBeat)>25{
-                        //BEAT
-                        if self.beat.hidden == true {
-                            
-                            self.beat.hidden = false
-                            self.audioPlot.backgroundColor = UIColor.whiteColor()
-                            
-                            //wormhole.passMessageObject("test", identifier: "mess")
-                            self.wormhole.passMessageObject("BOOM \(NSDate())", identifier: "mess")
-                            
-                        } else {
-                            
-                            self.beat.hidden = true
-                            self.audioPlot.backgroundColor = UIColor.blackColor()
-                            
-                            //wormhole.passMessageObject("test", identifier: "mess")
-                            self.wormhole.passMessageObject("BOOM \(NSDate())", identifier: "mess")
-                            
+                    
+                    let fftArray = self.fft(self.supersuperbuffer)
+                    
+                    
+                    self.supersuperbuffer = []
+                    self.bigBufferCounter = 1
+                    
+                    
+                    
+                    var lowerbound = 1
+                    var upperbound = 20
+                    
+                    var fftEnergy = fftArray[lowerbound...upperbound].reduce(0, +)
+                    println(fftEnergy)
+                    
+                    
+                    
+                    
+                    
+                    
+                    //let fftMax = fftArray[9...20].reduce(fftArray[9], { max($0, $1) })
+                    
+                    
+                    //println((fftEnergy - self.oldEnergy))
+                    
+                    
+                    
+                    if fftEnergy - self.oldEnergy > 0.01 {
+                        var beat_c = self.bufferCounter
+                        
+                        if(beat_c - self.lastBeat)>10{
+                            //BEAT
+                            if self.beat.hidden == true {
+                                
+                                self.beat.hidden = false
+                                self.audioPlot.backgroundColor = UIColor.whiteColor()
+                                
+                                wormhole.passMessageObject("test", identifier: "mess")
+                                
+                                
+                                
+                            } else {
+                                
+                                self.beat.hidden = true
+                                self.audioPlot.backgroundColor = UIColor.blackColor()
+                                
+                                wormhole.passMessageObject("test", identifier: "mess")
+                                
+                                
+                            }
+                            self.lastBeat = beat_c
                         }
-                        self.lastBeat = beat_c
+                        
                     }
                     
+                    
+                    //Save old Energy
+                    
+                    self.oldEnergy = fftEnergy
                 }
                 
                 
-                //Save old Energy
                 
-                self.oldEnergy = fftEnergy
                 
                 
             }
@@ -156,7 +175,7 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
     }
     
     
-    let fft_weights: FFTSetupD = vDSP_create_fftsetupD(vDSP_Length(log2(Float(511))), FFTRadix(kFFTRadix2))
+    let fft_weights: FFTSetupD = vDSP_create_fftsetupD(vDSP_Length(log2(Float(512))), FFTRadix(kFFTRadix2))
     
     func fft(var inputArray:[Double]) -> [Double] {
         var fftMagnitudes = [Double](count:inputArray.count, repeatedValue:0.0)
