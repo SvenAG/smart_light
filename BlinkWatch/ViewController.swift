@@ -12,42 +12,43 @@ import AVFoundation
 import GLKit
 import Accelerate
 
-//var wormhole = MMWormhole(applicationGroupIdentifier: "group.bosch.cmpjmi", optionalDirectory: "theWatch")
+var wormhole = MMWormhole(applicationGroupIdentifier: "group.bosch.cmpjmi", optionalDirectory: "theWatch")
 
 
 class ViewController: UIViewController, EZMicrophoneDelegate {
     
-    // MARK: - UI Objects
     @IBOutlet weak var printButton: UIButton!
     @IBOutlet weak var audioPlot: EZAudioPlotGL!
     @IBOutlet weak var beat: UILabel!
     
-    // MARK: - Attributes
+    
     var microphone: EZMicrophone!
+    
     var appendedBuffer = [Double]()
     var appendedFft = [Double]()
+    
     var fftCounter = 0
     var oldEnergy = 0 as Double
     var bufferCounter = 0
     var lastBeat = -10
-    var supersuperbuffer = [Double]()
-    var bigBufferCounter = 1
-    
-    // Tunnel for data exchange
-    var wormhole = MMWormhole(applicationGroupIdentifier: "group.bosch.cmpjmi", optionalDirectory: "theWatch")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
-        // initialize UI iphone
+        
+        
         self.microphone = EZMicrophone(microphoneDelegate: self)
+        
+        
+        
+        
         self.audioPlot.backgroundColor = UIColor.blackColor()
         self.audioPlot.color = UIColor.orangeColor()
         self.audioPlot.plotType = EZPlotType.Rolling
         self.audioPlot.shouldFill = false
         self.audioPlot.shouldMirror = false
         
-        // start recording via internal microphone
         self.microphone.startFetchingAudio()
         
     }
@@ -57,9 +58,18 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - BeatDetection
+    
+    
+    
+    
+    var supersuperbuffer = [Double]()
+    var bigBufferCounter = 1
+    
     func microphone(microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
         dispatch_async(dispatch_get_main_queue(), {
+            
+            
+            
             
             self.audioPlot.updateBuffer(buffer[0], withBufferSize: bufferSize)
             if(abs(buffer[0][0]) > 0.01){
@@ -93,6 +103,17 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
                     println(fftEnergy)
                     
                     
+                    
+                    
+                    
+                    
+                    //let fftMax = fftArray[9...20].reduce(fftArray[9], { max($0, $1) })
+                    
+                    
+                    //println((fftEnergy - self.oldEnergy))
+                    
+                    
+                    
                     if fftEnergy - self.oldEnergy > 0.01 {
                         var beat_c = self.bufferCounter
                         
@@ -100,30 +121,43 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
                             //BEAT
                             if self.beat.hidden == true {
                                 
-                                //self.beat.hidden = false
-                                //self.audioPlot.backgroundColor = UIColor.whiteColor()
+                                self.beat.hidden = false
+                                self.audioPlot.backgroundColor = UIColor.whiteColor()
                                 
-                                // send message via wormhole
-                                self.wormhole.passMessageObject("BOOM \(NSDate())", identifier: "mess")
+                                wormhole.passMessageObject("test", identifier: "mess")
+                                
                                 
                                 
                             } else {
                                 
-                                //self.beat.hidden = true
-                                //self.audioPlot.backgroundColor = UIColor.blackColor()
+                                self.beat.hidden = true
+                                self.audioPlot.backgroundColor = UIColor.blackColor()
                                 
-                                // send message via wormhole
-                                self.wormhole.passMessageObject("BOOM \(NSDate())", identifier: "mess")
+                                wormhole.passMessageObject("test", identifier: "mess")
+                                
                                 
                             }
                             self.lastBeat = beat_c
                         }
+                        
                     }
+                    
+                    
                     //Save old Energy
+                    
                     self.oldEnergy = fftEnergy
                 }
+                
+                
+                
+                
+                
             }
+            
         })
+        
+        
+        
     }
     
     func microphone(microphone: EZMicrophone!, hasAudioStreamBasicDescription audioStreamBasicDescription: AudioStreamBasicDescription) {
@@ -131,9 +165,18 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
     }
     
     func microphone(microphone: EZMicrophone!, hasBufferList bufferList: UnsafeMutablePointer<AudioBufferList>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
+        //println(bufferList[0])
     }
     
-    // MARK: - Fast-Fourier-Transformation
+    func sqrt(x: [Double]) -> [Double] {
+        var results = [Double](count:x.count, repeatedValue:0.0)
+        vvsqrt(&results, x, [Int32(x.count)])
+        return results
+    }
+    
+    
+    let fft_weights: FFTSetupD = vDSP_create_fftsetupD(vDSP_Length(log2(Float(512))), FFTRadix(kFFTRadix2))
+    
     func fft(var inputArray:[Double]) -> [Double] {
         var fftMagnitudes = [Double](count:inputArray.count, repeatedValue:0.0)
         var zeroArray = [Double](count:inputArray.count, repeatedValue:0.0)
@@ -149,12 +192,14 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
         return normalizedValues
     }
     
-    func sqrt(x: [Double]) -> [Double] {
-        var results = [Double](count:x.count, repeatedValue:0.0)
-        vvsqrt(&results, x, [Int32(x.count)])
-        return results
+    @IBAction func printButton(sender: AnyObject) {
+        
+        println(self.appendedBuffer)
+        println("----------------------------------------------------")
+        println(self.appendedFft)
+        
+        
+        
     }
-    
-    let fft_weights: FFTSetupD = vDSP_create_fftsetupD(vDSP_Length(log2(Float(512))), FFTRadix(kFFTRadix2))
 }
 
