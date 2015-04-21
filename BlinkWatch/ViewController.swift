@@ -12,9 +12,6 @@ import AVFoundation
 import GLKit
 import Accelerate
 
-//var wormhole = MMWormhole(applicationGroupIdentifier: "group.bosch.cmpjmi", optionalDirectory: "theWatch")
-
-
 class ViewController: UIViewController, EZMicrophoneDelegate {
     
     
@@ -96,16 +93,16 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
                         //BEAT
                         if self.beat.hidden == true {
                             
-                            self.beat.hidden = false
-                            self.audioPlot.backgroundColor = UIColor.whiteColor()
+                            //self.beat.hidden = false
+                            //self.audioPlot.backgroundColor = UIColor.whiteColor()
                             
                             //wormhole.passMessageObject("test", identifier: "mess")
                             self.wormhole.passMessageObject("BOOM \(NSDate())", identifier: "mess")
                             
                         } else {
                             
-                            self.beat.hidden = true
-                            self.audioPlot.backgroundColor = UIColor.blackColor()
+                            //self.beat.hidden = true
+                            //self.audioPlot.backgroundColor = UIColor.blackColor()
                             
                             //wormhole.passMessageObject("test", identifier: "mess")
                             self.wormhole.passMessageObject("BOOM \(NSDate())", identifier: "mess")
