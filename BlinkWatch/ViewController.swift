@@ -93,16 +93,16 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
                         //BEAT
                         if self.beat.hidden == true {
                             
-                            //self.beat.hidden = false
-                            //self.audioPlot.backgroundColor = UIColor.whiteColor()
+                            self.beat.hidden = false
+                            self.audioPlot.backgroundColor = UIColor.whiteColor()
                             
                             //wormhole.passMessageObject("test", identifier: "mess")
                             self.wormhole.passMessageObject("BOOM \(NSDate())", identifier: "mess")
                             
                         } else {
                             
-                            //self.beat.hidden = true
-                            //self.audioPlot.backgroundColor = UIColor.blackColor()
+                            self.beat.hidden = true
+                            self.audioPlot.backgroundColor = UIColor.blackColor()
                             
                             //wormhole.passMessageObject("test", identifier: "mess")
                             self.wormhole.passMessageObject("BOOM \(NSDate())", identifier: "mess")
@@ -127,19 +127,25 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
         //println(bufferList[0])
     }
     // MARK: - FFT
-    func fft(var inputArray:[Double]) -> [Double] {
-        var fftMagnitudes = [Double](count:inputArray.count, repeatedValue:0.0)
-        var zeroArray = [Double](count:inputArray.count, repeatedValue:0.0)
-        var splitComplexInput = DSPDoubleSplitComplex(realp: &inputArray, imagp: &zeroArray)
+    func fft(input: [Double]) -> [Double] {
+        var real = [Double](input)
+        var imaginary = [Double](count: input.count, repeatedValue: 0.0)
+        var splitComplex = DSPDoubleSplitComplex(realp: &real, imagp: &imaginary)
         
-        vDSP_fft_zipD(fft_weights, &splitComplexInput, 1, vDSP_Length(log2(CDouble(inputArray.count))), FFTDirection(FFT_FORWARD));
-        vDSP_zvmagsD(&splitComplexInput, 1, &fftMagnitudes, 1, vDSP_Length(inputArray.count));
+        let length = vDSP_Length(floor(log2(Float(input.count))))
+        let radix = FFTRadix(kFFTRadix2)
+        let weights = vDSP_create_fftsetupD(length, radix)
+        vDSP_fft_zipD(weights, &splitComplex, 1, length, FFTDirection(FFT_FORWARD))
         
-        let roots = sqrt(fftMagnitudes) // vDSP_zvmagsD returns squares of the FFT magnitudes, so take the root here
-        var normalizedValues = [Double](count:inputArray.count, repeatedValue:0.0)
+        var magnitudes = [Double](count: input.count, repeatedValue: 0.0)
+        vDSP_zvmagsD(&splitComplex, 1, &magnitudes, 1, vDSP_Length(input.count))
         
-        vDSP_vsmulD(roots, vDSP_Stride(1), [2.0 / Double(inputArray.count)], &normalizedValues, vDSP_Stride(1), vDSP_Length(inputArray.count))
-        return normalizedValues
+        var normalizedMagnitudes = [Double](count: input.count, repeatedValue: 0.0)
+        vDSP_vsmulD(sqrt(magnitudes), 1, [2.0 / Double(input.count)], &normalizedMagnitudes, 1, vDSP_Length(input.count))
+        
+        vDSP_destroy_fftsetupD(weights)
+        
+        return normalizedMagnitudes
     }
     
     func sqrt(x: [Double]) -> [Double] {
@@ -147,7 +153,6 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
         vvsqrt(&results, x, [Int32(x.count)])
         return results
     }
-    
-    let fft_weights: FFTSetupD = vDSP_create_fftsetupD(vDSP_Length(log2(Float(511))), FFTRadix(kFFTRadix2))
+
 }
 
