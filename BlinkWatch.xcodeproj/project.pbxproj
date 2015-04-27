@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		325C1AEA1AEAC75400396313 /* launchImage1242x2208@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 325C1AE91AEAC75400396313 /* launchImage1242x2208@2x.png */; };
 		F984001F1ADD861A0096E8C1 /* AEFloatConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400061ADD861A0096E8C1 /* AEFloatConverter.m */; };
 		F98400201ADD861A0096E8C1 /* AEFloatConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400061ADD861A0096E8C1 /* AEFloatConverter.m */; };
 		F98400211ADD861A0096E8C1 /* AEFloatConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F98400061ADD861A0096E8C1 /* AEFloatConverter.m */; };
@@ -100,6 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		325C1AE91AEAC75400396313 /* launchImage1242x2208@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage1242x2208@2x.png"; sourceTree = "<group>"; };
 		32C7A7CD1AE56F0E00CADDC3 /* BlinkWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "BlinkWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		F96296D51ADD87EF00D8A462 /* BlinkWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BlinkWatch.entitlements; sourceTree = "<group>"; };
 		F96296D71ADD898100D8A462 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		F984FFAC1ADD83BB0096E8C1 = {
 			isa = PBXGroup;
 			children = (
+				325C1AE91AEAC75400396313 /* launchImage1242x2208@2x.png */,
 				F96296D71ADD898100D8A462 /* PrefixHeader.pch */,
 				F984FFB71ADD83BB0096E8C1 /* BlinkWatch */,
 				F984FFCD1ADD83BB0096E8C1 /* BlinkWatchTests */,
@@ -450,6 +453,7 @@
 			files = (
 				F984FFC01ADD83BB0096E8C1 /* Main.storyboard in Resources */,
 				F984FFC51ADD83BB0096E8C1 /* LaunchScreen.xib in Resources */,
+				325C1AEA1AEAC75400396313 /* launchImage1242x2208@2x.png in Resources */,
 				F984FFC21ADD83BB0096E8C1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
