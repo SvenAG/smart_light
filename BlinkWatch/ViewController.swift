@@ -94,7 +94,7 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
                     
                     var lowerbound = 1
                     var upperbound = 64
-                    var fftEnergy = fftArray[lowerbound...upperbound].reduce(0, +)
+                    var fftEnergy = fftArray[lowerbound...upperbound].reduce(0, combine: +)
                     
                     self.energyArray.append(fftEnergy)
                     
@@ -104,7 +104,7 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
                     }
                     //Calculate average
                     
-                    var averageEnergy = Double(self.energyArray.reduce(0, +)) / Double(self.energyArray.count)
+                    var averageEnergy = Double(self.energyArray.reduce(0, combine: +)) / Double(self.energyArray.count)
                     
                     //Define Constant C for Energy Comparison
                     var C = 1.0

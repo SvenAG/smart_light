@@ -69,7 +69,7 @@ class InterfaceController: WKInterfaceController {
     
     
     // MARK: - Setting Backgroundcolor
-    func changeBackgroundColor(identifyer: String, index: Int) {
+    func changeBackgroundColor(identifyer: NSString, index: Int) {
         
         var farbPalette = [UIColor]()
         
@@ -93,7 +93,7 @@ class InterfaceController: WKInterfaceController {
         var listener: Void = wormhole.listenForMessageWithIdentifier("mess", listener: { (String) -> Void in
             
             // setting text of button label
-            var output : NSString = self.wormhole.messageWithIdentifier("mess") as NSString!
+            var output : NSString = self.wormhole.messageWithIdentifier("mess") as! NSString!
             
             // checking if new bass-sequence is different from last bass-sequence
             if (output != self.oldOutput) {
@@ -108,7 +108,7 @@ class InterfaceController: WKInterfaceController {
                         randomNumber -= 1
                     }
                 }
-                self.changeBackgroundColor(output, index: randomNumber)
+                self.changeBackgroundColor(output , index: randomNumber)
                 self.oldRandomNumber = randomNumber
                 self.oldOutput = output
                 
